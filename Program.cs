@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 class Ejercicio
 {
@@ -131,44 +132,89 @@ class Ejercicio
         //--------------------------------------------------------
         //------------------------EJERCICIO-----------------------
         //--------------------------------------------------------
-        ArrayList lista = new ArrayList();
+        //ArrayList lista = new ArrayList();
 
-        while (true) 
-        {
-            Console.WriteLine("Ingrese la cadena de texto que desee.");
-            Console.WriteLine("Cuando quiera ver lo introducido solo ingresar un espacio vacio.");
-            Console.WriteLine("");
+        //while (true) 
+        //{
+        //    Console.WriteLine("Ingrese la cadena de texto que desee.");
+        //    Console.WriteLine("Cuando quiera ver lo introducido solo ingresar un espacio vacio.");
+        //    Console.WriteLine("");
 
-            string dato = Console.ReadLine();
+        //    string dato = Console.ReadLine();
 
-            Console.WriteLine("");
+        //    Console.WriteLine("");
 
-            if (dato == "")
-            {
-                while (true)
-                {
-                    Console.WriteLine("A que posicion de la lista desea acceder? (ingrese el numero).");
-                    Console.WriteLine("Si no desea visualizar ninguna posicion ingrese el numero 0 para SALIR.");
-                    Console.WriteLine("");
+        //    if (dato == "")
+        //    {
+        //        while (true)
+        //        {
+        //            Console.WriteLine("A que posicion de la lista desea acceder? (ingrese el numero).");
+        //            Console.WriteLine("Si no desea visualizar ninguna posicion ingrese el numero 0 para SALIR.");
+        //            Console.WriteLine("");
 
-                    int posicion = Convert.ToInt32(Console.ReadLine());
+        //            int posicion = Convert.ToInt32(Console.ReadLine());
 
-                    if (posicion == 0)
-                    {
-                        Environment.Exit(0);
-                    }
-                    else
-                    {
-                        Console.WriteLine("En posicion " + posicion + " se encuentra:" + "{0}", lista[posicion -1]);
-                        Console.WriteLine("");
-                    }
-                }
-            }
-            else
-            {
-                lista.Add(dato);
-            }
-        }
+        //            if (posicion == 0)
+        //            {
+        //                Environment.Exit(0);
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("En posicion " + posicion + " se encuentra:" + "{0}", lista[posicion -1]);
+        //                Console.WriteLine("");
+        //            }
+        //        }
+        //    }
+        //    else
+        //    {
+        //        lista.Add(dato);
+        //    }
+        //}
+
+        #endregion
+
+        #region C#077 "SortedList"
+
+        //SortedList<string,string> diccio = new SortedList<string,string>();
+        //diccio.Add("hola", "hello");
+        //diccio["hasta luego"] = "see you later";
+
+        //Console.WriteLine( diccio["hola"] );
+
+        //if (diccio.ContainsKey("adiós"))
+        //{
+        //    Console.WriteLine(diccio["adiós"]);
+        //}
+
+        //--------------------------------------------------------
+        //------------------------EJERCICIO-----------------------
+        //--------------------------------------------------------
+
+        SortedList<string, string> diccio = new SortedList<string, string>();
+        diccio.Add("hello", "hola");
+        diccio.Add("good bye", "chau");
+        diccio.Add("see you later", "nos vemos");
+        diccio.Add("how are you?", "¿como estas?");
+        diccio.Add("i`m fine", "estoy bien");
+        diccio.Add("thanks", "gracias");
+        diccio.Add("your welcome", "de nada");
+        diccio.Add("yes", "si");
+        diccio.Add("no", "no");
+
+        //while (true) 
+        //{
+        //    Console.Write("Ingresa una clave: ");
+        //    string clave = Console.ReadLine();
+
+        //    if (diccio.ContainsKey(clave))
+        //    {
+        //        Console.WriteLine("{1}", clave, diccio[clave]);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"La clave {clave} no existe");
+        //    }
+        //}      
 
         #endregion
     }
