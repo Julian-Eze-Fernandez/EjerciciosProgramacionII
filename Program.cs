@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class Ejercicio
 {
@@ -201,21 +203,27 @@ class Ejercicio
         diccio.Add("yes", "si");
         diccio.Add("no", "no");
 
-        //while (true) 
-        //{
-        //    Console.Write("Ingresa una clave: ");
-        //    string clave = Console.ReadLine();
+        Console.WriteLine("Bienvenido, si desea cerrar el programa escriba 'salir'");
 
-        //    if (diccio.ContainsKey(clave))
-        //    {
-        //        Console.WriteLine("{1}", clave, diccio[clave]);
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"La clave {clave} no existe");
-        //    }
-        //}      
+        while (true)
+        {
+            Console.Write("Ingresa una clave:");
+            string clave = Console.ReadLine();
 
-        #endregion
+            if (diccio.ContainsKey(clave))
+            {
+                Console.WriteLine(diccio[clave]);
+            }
+            else if (clave == "salir")
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine($"La clave {clave} no existe");
+            }
+            #endregion
+        }
     }
 }
+
