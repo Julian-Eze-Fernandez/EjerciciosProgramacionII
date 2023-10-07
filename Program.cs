@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class Ejercicio
 {
@@ -192,38 +188,127 @@ class Ejercicio
         //------------------------EJERCICIO-----------------------
         //--------------------------------------------------------
 
-        SortedList<string, string> diccio = new SortedList<string, string>();
-        diccio.Add("hello", "hola");
-        diccio.Add("good bye", "chau");
-        diccio.Add("see you later", "nos vemos");
-        diccio.Add("how are you?", "¿como estas?");
-        diccio.Add("i`m fine", "estoy bien");
-        diccio.Add("thanks", "gracias");
-        diccio.Add("your welcome", "de nada");
-        diccio.Add("yes", "si");
-        diccio.Add("no", "no");
+        //SortedList<string, string> diccio = new SortedList<string, string>();
+        //diccio.Add("hello", "hola");
+        //diccio.Add("bye", "adios");
+        //diccio.Add("yes", "si");
+        //diccio.Add("no", "no");
+        //diccio.Add("kiss", "beso");
+        //diccio.Add("drink", "beber");
 
-        Console.WriteLine("Bienvenido, si desea cerrar el programa escriba 'salir'");
+        //Console.WriteLine("Bienvenido, si desea cerrar el programa escriba 'salir'");
 
-        while (true)
+        //while (true)
+        //{
+        //    Console.Write("Ingresa una clave:");
+        //    string clave = Console.ReadLine();
+
+
+        //    if (diccio.ContainsKey(clave))
+        //    {
+        //        Console.WriteLine(diccio[clave]);
+        //    }
+        //    else if (clave == "salir")
+        //    {
+        //        Environment.Exit(0);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"La clave {clave} no existe");
+        //    }
+        //}
+        #endregion
+
+        #region C#078 "Tablas Hash"
+
+        //Dictionary<string, string> diccio = new Dictionary<string, string>();
+        //diccio.Add("hola", "hello");
+        //diccio["hasta luego"] = "see you later";
+
+        //Console.WriteLine(diccio["hola"]);
+
+        //if (diccio.ContainsKey("adiós"))
+        //{
+        //    Console.WriteLine(diccio["adiós"]);
+        //}
+
+        //--------------------------------------------------------
+        //------------------------EJERCICIO-----------------------
+        //--------------------------------------------------------
+
+        //Dictionary<string, string> diccio = new Dictionary<string, string>();
+        //diccio.Add("hello", "hola");
+        //diccio.Add("bye", "adios");
+        //diccio.Add("yes", "si");
+        //diccio.Add("no", "no");
+        //diccio.Add("kiss", "beso");
+        //diccio.Add("drink", "beber");
+
+        //Console.WriteLine("Palabras del diccionario:");
+
+        //foreach (var item in diccio)
+        //{
+        //    Console.WriteLine($"Ingles: {item.Key}, Español: {item.Value}");
+        //}
+        #endregion
+
+        #region C#079 "Sortedset y Hashset"
+
+        //SortedSet<string> diccio = new SortedSet<string>();
+        //diccio.Add("hola");
+        //diccio.Add("hasta luego");
+
+        //if (diccio.Contains("adiós"))
+        //{
+        //    Console.WriteLine("adiós si esta");
+        //}
+        //if (diccio.Contains("hola"))
+        //{
+        //    Console.WriteLine("hola si esta");
+        //}
+
+        //HashSet<string> diccio = new HashSet<string>();
+        //diccio.Add("hola");
+        //diccio.Add("hasta luego");
+
+        //if (diccio.Contains("adiós"))
+        //{
+        //    Console.WriteLine("adiós si esta");
+        //}
+        //if (diccio.Contains("hola"))
+        //{
+        //    Console.WriteLine("hola si esta");
+        //}
+
+        //--------------------------------------------------------
+        //------------------------EJERCICIO-----------------------
+        //--------------------------------------------------------
+
+        SortedSet<string> libro = new SortedSet<string>();
+
+        while (true) 
         {
-            Console.Write("Ingresa una clave:");
-            string clave = Console.ReadLine();
+            Console.WriteLine("Ingrese una frase:");
+            string frase = Console.ReadLine();
 
-            if (diccio.ContainsKey(clave))
+            if (frase == "")
             {
-                Console.WriteLine(diccio[clave]);
+                break;
             }
-            else if (clave == "salir")
+
+            if (!libro.Contains(frase))
             {
-                Environment.Exit(0);
+                libro.Add(frase);
+                Console.WriteLine("Frase guardada.");
             }
             else
             {
-                Console.WriteLine($"La clave {clave} no existe");
+                Console.WriteLine($"Esta frase ya existe.");
             }
-            #endregion
+
         }
+
+        #endregion
     }
 }
 
